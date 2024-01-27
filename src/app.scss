@@ -32,3 +32,10 @@ body {
         rgba(1, 0, 14, 1) 100%
     );
 }
+
+.stars {
+    position: absolute;
+    z-index: -1;
+    width: 7px;
+    height: 7px;
+}
