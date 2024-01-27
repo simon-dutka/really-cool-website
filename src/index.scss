@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap');
+
+// Fonts
+$rubikScribble: 'Rubik Scribble', system-ui;
+
+// Colors
+$white: #ffffff;
+
+//RWD 450px, 700px, 1050px, 1400px
+$breakpoints: (
+    'sm': '28.125rem',
+    'md': '43.75rem',
+    'lg': '65.625rem',
+    'xl': '87.5rem',
+);
+
+@mixin breakpointMax($screen-size) {
+    @media (max-width: map-get($breakpoints, $screen-size)) {
+        @content;
+    }
+}

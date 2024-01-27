@@ -1,0 +1,18 @@
+@import '../index.scss';
+
+.header {
+    font-family: $rubikScribble;
+
+    &__heading {
+        font-size: 3.2rem;
+        text-align: center;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+
+        height: 100vh;
+    }
+}
