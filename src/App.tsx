@@ -3,14 +3,15 @@ import './app.scss';
 import Header from './Header/Header';
 
 const StarsGenerate = () => {
-    let boxShadowRandom = '';
+    let boxShadowRandom: string = '';
 
     for (let i = 0; i < 110; i++) {
-        let color = 'rgba(255, 255, 255, 0.6)';
-        let height = Math.floor(Math.random() * 100) + 1;
-        let width = Math.floor(Math.random() * 100) + 1;
+        let color: string = 'rgba(255, 255, 255, 0.6)';
+        let height: number = Math.floor(Math.random() * 100) + 1;
+        let width: number = Math.floor(Math.random() * 100) + 1;
 
-        boxShadowRandom += height + 'vw ' + width + 'vw ' + color;
+        boxShadowRandom +=
+            height.toString() + 'vw ' + width.toString() + 'vw ' + color;
 
         if (i < 109) {
             boxShadowRandom += ', ';
