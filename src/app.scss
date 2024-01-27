@@ -24,6 +24,7 @@ body {
     color: $white;
     font-size: 1rem;
     font-weight: 400;
+    height: 500vh;
 
     background: rgb(5, 11, 33);
     background: radial-gradient(
@@ -34,7 +35,7 @@ body {
 }
 
 .stars {
-    position: absolute;
+    position: fixed;
     z-index: -1;
     width: 7px;
     height: 7px;

@@ -3,22 +3,28 @@ import './app.scss';
 import Header from './Header/Header';
 
 const StarsGenerate = () => {
-    let boxShadowRandom: string = '';
+    let boxShadowRandom: string[] = [];
 
-    for (let i = 0; i < 110; i++) {
+    for (let i = 0; i < 100; i++) {
         let color: string = 'rgba(255, 255, 255, 0.6)';
         let height: number = Math.floor(Math.random() * 100) + 1;
         let width: number = Math.floor(Math.random() * 100) + 1;
 
-        boxShadowRandom +=
-            height.toString() + 'vw ' + width.toString() + 'vw ' + color;
+        boxShadowRandom.push(`${width}vw ${height}vh ${color}`);
 
-        if (i < 109) {
-            boxShadowRandom += ', ';
+        if (i < 99) {
+            boxShadowRandom.push(', ');
         }
+
+        console.log(boxShadowRandom);
     }
 
-    return <div className='stars' style={{ boxShadow: boxShadowRandom }}></div>;
+    return (
+        <div
+            className='stars'
+            style={{ boxShadow: boxShadowRandom.join('') }}
+        ></div>
+    );
 };
 
 const App = () => (
